@@ -20,15 +20,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:src="@drawable/xcopy">
         </ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="70dp"
+            android:textSize="60dp"
             android:id="@+id/xscore"
             android:textColor="@color/white"
             android:layout_gravity="center"
@@ -41,15 +41,15 @@
             android:layout_marginLeft="80dp"
         android:orientation="vertical">
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:src="@drawable/ocopy">
         </ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="70dp"
+            android:textSize="60dp"
             android:id="@+id/oscore"
             android:textColor="@color/white"
             android:layout_gravity="center"
@@ -238,7 +238,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_below="@id/btn8"
+            android:layout_below="@+id/rst2"
             android:id="@+id/rst1"
             android:text="RESET"
             android:background="@drawable/selectleveldesign"

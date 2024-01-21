@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class chooselevel extends AppCompatActivity {
 
-    Button singleplayer,multiplayer;
+    private Button singleplayer,multiplayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class chooselevel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(chooselevel.this,MainActivity.class));
+                finish();
             }
         });
     }

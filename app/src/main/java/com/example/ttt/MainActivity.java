@@ -11,12 +11,13 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
-    int w1=3,w2=3,w3=3,w4=3,w5=3,w6=3,w7=3,w8=3,w9=3;
-    String checkplayer="X";
+    private ImageView btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
+    private int w1=3,w2=3,w3=3,w4=3,w5=3,w6=3,w7=3,w8=3,w9=3;
+    private String checkplayer="X";
     private int count=0,xcount=0,ocount=0;
-    Button reset;
-    TextView xscoree,oscoree;
+    private Button resetButton;
+    private TextView xscoree,oscoree;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +34,19 @@ public class MainActivity extends AppCompatActivity {
         btn8=findViewById(R.id.img8);
         btn9=findViewById(R.id.img9);
 
-        reset=findViewById(R.id.rst1);
+        resetButton=findViewById(R.id.rst1);
 
         xscoree=findViewById(R.id.xscore);
         oscoree=findViewById(R.id.oscore);
 
-        reset.setOnClickListener(new View.OnClickListener() {
+        resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                xcount=0;
-                ocount=0;
+                // Call the reset method
+                xcount = 0;
+                ocount = 0;
+                xscoree.setText(String.valueOf(xcount));
+                oscoree.setText(String.valueOf(ocount));
             }
         });
 
@@ -242,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void checkwinner() {
         if(w1==1 && w2==1 && w3==1 || w4==1 && w5==1 && w6==1 || w7==1 && w8==1 && w9==1 ||
-                w1==1 && w4==1 && w7==1 || w2==2 && w5==1 && w8==1 || w3==1 && w6==1 && w9==1 ||
+                w1==1 && w4==1 && w7==1 || w2==1 && w5==1 && w8==1 || w3==1 && w6==1 && w9==1 ||
                 w1==1 && w5==1 && w9==1 || w3==1 && w5==1 && w7==1 ){
             Toast.makeText(this, "X WIN", Toast.LENGTH_SHORT).show();
             xcount++;
