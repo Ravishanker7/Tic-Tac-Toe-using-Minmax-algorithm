@@ -25,5 +25,12 @@ public class chooselevel extends AppCompatActivity {
                 finish();
             }
         });
+
+        multiplayer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(chooselevel.this,MainActivity.class));
+            }
+        });
     }
 }

@@ -2,6 +2,8 @@ package com.example.ttt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
     private int w1=3,w2=3,w3=3,w4=3,w5=3,w6=3,w7=3,w8=3,w9=3;
     private String checkplayer="X";
     private int count=0,xcount=0,ocount=0;
-    private Button resetButton;
+    private Button resetButton,homee;
     private TextView xscoree,oscoree;
 
-
+    private MediaPlayer play;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         xscoree=findViewById(R.id.xscore);
         oscoree=findViewById(R.id.oscore);
 
+        homee=findViewById(R.id.home1);
+
+        play=MediaPlayer.create(this,R.raw.music);
+
+        play.start();
+
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                 ocount = 0;
                 xscoree.setText(String.valueOf(xcount));
                 oscoree.setText(String.valueOf(ocount));
+            }
+        });
+
+        homee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,chooselevel.class));
             }
         });
 
