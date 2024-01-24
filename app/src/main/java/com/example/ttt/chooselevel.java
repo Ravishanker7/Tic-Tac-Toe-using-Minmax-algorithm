@@ -29,7 +29,7 @@ public class chooselevel extends AppCompatActivity {
         multiplayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(chooselevel.this,MainActivity.class));
+                startActivity(new Intent(chooselevel.this,multiplayer.class));
             }
         });
     }
