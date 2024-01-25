@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,8 +17,6 @@ import java.util.List;
 public class multiplayer extends AppCompatActivity {
 
     private ImageView btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
-    private int w1 = 3, w2 = 3, w3 = 3, w4 = 3, w5 = 3, w6 = 3, w7 = 3, w8 = 3, w9 = 3;
-    private String checkplayer = "X";
     private int count = 0, xcount = 0, ocount = 0;
     private Button resetButton, homee;
     private TextView xscoree, oscoree;
@@ -186,11 +185,45 @@ public class multiplayer extends AppCompatActivity {
             }
         });
     }
+    private void delay(int n){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(n==0) {
+                    btn1.setImageResource(R.drawable.ocopy);
+                }
+                if(n==1){
+                    btn2.setImageResource(R.drawable.ocopy);
+                }
+                if(n==2){
+                    btn3.setImageResource(R.drawable.ocopy);
+                }
+                if(n==4){
+                    btn5.setImageResource(R.drawable.ocopy);
+                }
+                if(n==5){
+                    btn6.setImageResource(R.drawable.ocopy);
+                }
+                if(n==6){
+                    btn7.setImageResource(R.drawable.ocopy);
+                }
+                if(n==7){
+                    btn8.setImageResource(R.drawable.ocopy);
+                }
+                if(n==8){
+                    btn9.setImageResource(R.drawable.ocopy);
+                }
+                if(n==1){
+                    btn2.setImageResource(R.drawable.ocopy);
+                }
+            }
+        },200);
+    }
     public void aimvoe(int board[]){
         bestmove=findBestMove(board);
         if(bestmove==0){
             if(board[0]==2){
-                btn1.setImageResource(R.drawable.ocopy);
+                delay(0);
                 board[0]=1;
                 checkwinner();
                 count++;
@@ -198,7 +231,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==1){
             if(board[1]==2){
-                btn2.setImageResource(R.drawable.ocopy);
+                delay(1);
                 board[1]=1;
                 checkwinner();
                 count++;
@@ -206,7 +239,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==2){
             if(board[2]==2){
-                btn3.setImageResource(R.drawable.ocopy);
+                delay(2);
                 board[2]=1;
                 checkwinner();
                 count++;
@@ -214,7 +247,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==3){
             if(board[3]==2){
-                btn4.setImageResource(R.drawable.ocopy);
+                delay(3);
                 board[3]=1;
                 checkwinner();
                 count++;
@@ -222,7 +255,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==4){
             if(board[4]==2){
-                btn5.setImageResource(R.drawable.ocopy);
+                delay(4);
                 board[4]=1;
                 checkwinner();
                 count++;
@@ -230,7 +263,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==5){
             if(board[5]==2){
-                btn6.setImageResource(R.drawable.ocopy);
+                delay(5);
                 board[5]=1;
                 checkwinner();
                 count++;
@@ -238,7 +271,7 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==6){
             if(board[6]==2){
-                btn7.setImageResource(R.drawable.ocopy);
+                delay(6);
                 board[6]=1;
                 checkwinner();
                 count++;
@@ -246,14 +279,14 @@ public class multiplayer extends AppCompatActivity {
         }
         if(bestmove==7){
             if(board[7]==2){
-                btn8.setImageResource(R.drawable.ocopy);
+                delay(7);
                 board[7]=1;
                 checkwinner();
                 count++;
             }
         }if(bestmove==8){
             if(board[8]==2){
-                btn9.setImageResource(R.drawable.ocopy);
+                delay(8);
                 board[8]=1;
                 checkwinner();
                 count++;
@@ -264,80 +297,88 @@ public class multiplayer extends AppCompatActivity {
             reset();
         }
     }
-    private void checkwinner(){
-        if(board[0]==board[1] && board[1]==board[2] && board[0]!=2){
-            if(board[0]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[0]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+    private void delayy(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
                 reset();
             }
-        }
-        if(board[3]==board[4] && board[4]==board[5] && board[3]!=2){
-            if(board[3]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[3]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[6]==board[7] && board[7]==board[8] && board[6]!=2){
-            if(board[6]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[6]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[0]==board[3] && board[3]==board[6] && board[0]!=2){
-            if(board[6]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[6]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[1]==board[4] && board[4]==board[7] && board[1]!=2){
-            if(board[1]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[1]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[2]==board[5] && board[5]==board[8] && board[2]!=2){
-            if(board[2]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[2]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[0]==board[4] && board[4]==board[8] && board[0]!=2){
-            if(board[0]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[0]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
-        if(board[2]==board[4] && board[4]==board[6] && board[2]!=2){
-            if(board[2]==1){
-                Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }else if(board[2]==0){
-                Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
-                reset();
-            }
-        }
+        },1000);
     }
+        private void checkwinner () {
+            if (board[0] == board[1] && board[1] == board[2] && board[0] != 2) {
+                if (board[0] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[0] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[3] == board[4] && board[4] == board[5] && board[3] != 2) {
+                if (board[3] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[3] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[6] == board[7] && board[7] == board[8] && board[6] != 2) {
+                if (board[6] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[6] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[0] == board[3] && board[3] == board[6] && board[0] != 2) {
+                if (board[6] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[6] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[1] == board[4] && board[4] == board[7] && board[1] != 2) {
+                if (board[1] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[1] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[2] == board[5] && board[5] == board[8] && board[2] != 2) {
+                if (board[2] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[2] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[0] == board[4] && board[4] == board[8] && board[0] != 2) {
+                if (board[0] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[0] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+            if (board[2] == board[4] && board[4] == board[6] && board[2] != 2) {
+                if (board[2] == 1) {
+                    Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                } else if (board[2] == 0) {
+                    Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    delayy();
+                }
+            }
+        }
 
     private void reset(){
 

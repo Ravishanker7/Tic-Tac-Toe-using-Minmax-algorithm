@@ -59,6 +59,33 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/btn2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img">
+    </ImageView>
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/btn5"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img">
+    </ImageView>
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/btn8"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img">
+    </ImageView>
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/img">
+    </ImageView>
     <RelativeLayout
         android:layout_width="90dp"
         android:layout_height="90dp"
