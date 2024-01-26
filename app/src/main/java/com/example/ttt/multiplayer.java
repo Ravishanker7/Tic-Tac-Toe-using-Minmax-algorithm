@@ -301,6 +301,8 @@ public class multiplayer extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                oscoree.setText(String.valueOf(ocount));
+                xscoree.setText(String.valueOf(xcount));
                 reset();
             }
         },1000);
@@ -309,72 +311,88 @@ public class multiplayer extends AppCompatActivity {
             if (board[0] == board[1] && board[1] == board[2] && board[0] != 2) {
                 if (board[0] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[0] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[3] == board[4] && board[4] == board[5] && board[3] != 2) {
                 if (board[3] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[3] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[6] == board[7] && board[7] == board[8] && board[6] != 2) {
                 if (board[6] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[6] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[0] == board[3] && board[3] == board[6] && board[0] != 2) {
                 if (board[6] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[6] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[1] == board[4] && board[4] == board[7] && board[1] != 2) {
                 if (board[1] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[1] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[2] == board[5] && board[5] == board[8] && board[2] != 2) {
                 if (board[2] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[2] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[0] == board[4] && board[4] == board[8] && board[0] != 2) {
                 if (board[0] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[0] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
             if (board[2] == board[4] && board[4] == board[6] && board[2] != 2) {
                 if (board[2] == 1) {
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
+                    ocount++;
                     delayy();
                 } else if (board[2] == 0) {
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
+                    xcount++;
                     delayy();
                 }
             }
