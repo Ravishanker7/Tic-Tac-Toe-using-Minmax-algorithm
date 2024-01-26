@@ -172,9 +172,10 @@
         android:layout_marginTop="20dp">
 
         <ImageView
+            android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/img1">
+            android:layout_marginBottom="10dp">
         </ImageView>
     </RelativeLayout>
     <RelativeLayout

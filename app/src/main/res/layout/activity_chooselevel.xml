@@ -4,9 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#33CCFF"
+    android:background="#343656"
     android:orientation="vertical"
     tools:context=".chooselevel">
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/selectleveldesign"
+        android:text="LOGOUT"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></Button>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -37,16 +51,6 @@
             android:layout_gravity="center"
             android:background="@drawable/selectleveldesign"
             android:text="MULTIPLAYER">
-        </Button>
-        <Button
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:textSize="20dp"
-            android:id="@+id/logout"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/selectleveldesign"
-            android:text="LOGOUT">
         </Button>
     </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ public class multiplayer extends AppCompatActivity {
     private int bestmove;
     private int move;
     private int[] board = {2,2,2,2,2,2,2,2,2};
+
+    private RelativeLayout rl1,rl2,rl3,rl4,rl5,rl6,rl7,rl8,rl9;
 
     //since there are 9 grids
     //if avialable is 0 than place x
@@ -47,6 +50,18 @@ public class multiplayer extends AppCompatActivity {
         btn7 = findViewById(R.id.img7);
         btn8 = findViewById(R.id.img8);
         btn9 = findViewById(R.id.img9);
+
+        rl1=findViewById(R.id.btn1);
+        rl2=findViewById(R.id.btn2);
+        rl3=findViewById(R.id.btn3);
+        rl4=findViewById(R.id.btn4);
+        rl5=findViewById(R.id.btn5);
+        rl6=findViewById(R.id.btn6);
+        rl7=findViewById(R.id.btn7);
+        rl8=findViewById(R.id.btn8);
+        rl9=findViewById(R.id.btn9);
+
+
 
         resetButton = findViewById(R.id.rst1);
 
@@ -310,10 +325,16 @@ public class multiplayer extends AppCompatActivity {
         private void checkwinner () {
             if (board[0] == board[1] && board[1] == board[2] && board[0] != 2) {
                 if (board[0] == 1) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl2.setBackgroundResource(R.drawable.indicate);
+                    //rl3.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[0] == 0) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl2.setBackgroundResource(R.drawable.indicate);
+                    //rl3.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -321,10 +342,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[3] == board[4] && board[4] == board[5] && board[3] != 2) {
                 if (board[3] == 1) {
+                    //rl4.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl6.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[3] == 0) {
+                    //rl4.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl6.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -332,10 +359,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[6] == board[7] && board[7] == board[8] && board[6] != 2) {
                 if (board[6] == 1) {
+                    //rl7.setBackgroundResource(R.drawable.indicate);
+                    //rl8.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[6] == 0) {
+                    //rl7.setBackgroundResource(R.drawable.indicate);
+                    //rl8.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -343,10 +376,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[0] == board[3] && board[3] == board[6] && board[0] != 2) {
                 if (board[6] == 1) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl4.setBackgroundResource(R.drawable.indicate);
+                    //rl7.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[6] == 0) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl4.setBackgroundResource(R.drawable.indicate);
+                    //rl7.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -354,10 +393,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[1] == board[4] && board[4] == board[7] && board[1] != 2) {
                 if (board[1] == 1) {
+                    //rl2.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl8.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[1] == 0) {
+                    //rl2.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl8.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -365,10 +410,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[2] == board[5] && board[5] == board[8] && board[2] != 2) {
                 if (board[2] == 1) {
+                    //rl3.setBackgroundResource(R.drawable.indicate);
+                    //rl6.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[2] == 0) {
+                    //rl3.setBackgroundResource(R.drawable.indicate);
+                    //rl6.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -376,10 +427,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[0] == board[4] && board[4] == board[8] && board[0] != 2) {
                 if (board[0] == 1) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[0] == 0) {
+                    //rl1.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl9.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -387,10 +444,16 @@ public class multiplayer extends AppCompatActivity {
             }
             if (board[2] == board[4] && board[4] == board[6] && board[2] != 2) {
                 if (board[2] == 1) {
+                    //rl3.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl7.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "O WON", Toast.LENGTH_SHORT).show();
                     ocount++;
                     delayy();
                 } else if (board[2] == 0) {
+                    //rl3.setBackgroundResource(R.drawable.indicate);
+                    //rl5.setBackgroundResource(R.drawable.indicate);
+                    //rl7.setBackgroundResource(R.drawable.indicate);
                     Toast.makeText(this, "X WON", Toast.LENGTH_SHORT).show();
                     xcount++;
                     delayy();
@@ -409,6 +472,19 @@ public class multiplayer extends AppCompatActivity {
         btn7.setImageDrawable(null);
         btn8.setImageDrawable(null);
         btn9.setImageDrawable(null);
+
+        rl1.setBackgroundResource(0);
+        rl2.setBackgroundResource(0);
+        rl3.setBackgroundResource(0);
+        rl4.setBackgroundResource(0);
+        rl5.setBackgroundResource(0);
+        rl6.setBackgroundResource(0);
+        rl7.setBackgroundResource(0);
+        rl8.setBackgroundResource(0);
+        rl9.setBackgroundResource(0);
+
+
+
         board=new int[]{2,2,2,2,2,2,2,2,2};
         count=0;
     }
